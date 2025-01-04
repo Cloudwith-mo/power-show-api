@@ -1,0 +1,10 @@
+# Virtual Environment
+.venv/
+
+# Python Bytecode
+*.pyc
+*.pyo
+*.pyd
+
+# IDE Files (if you're using VSCode or other editors)
+.vscode/
