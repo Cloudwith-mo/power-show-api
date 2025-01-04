@@ -1,40 +1,37 @@
-# Power Show API
+# Power API
 
-This is a FastAPI project for the TV show **Power**. The API provides endpoints to retrieve data about the show, including seasons, episodes, and episode titles.
+A simple FastAPI project that provides data about the famous TV show *Power*. The API allows users to retrieve information about the show's cast, seasons, episodes, and more.
 
-## API Documentation
+## Features
 
-You can access the API documentation (Swagger UI) directly by visiting:
+- Retrieve information about the cast of *Power*.
+- Access data for all six seasons of the show.
+- Get episode titles for specific seasons and episodes.
+- Built with FastAPI for fast performance and automatic documentation via Swagger UI.
 
-[API Documentation](http://127.0.0.1:8000/docs)
+## API Endpoints
 
-> **Note**: This link will only work while the FastAPI app is running on your local machine.
+### 1. Get the Cast
 
-## How to Run
+**Endpoint**: `/cast`
 
-1. Clone this repository to your local machine:
+**Method**: `GET`
 
-   ```bash
-   git clone https://github.com/yourusername/power-show-api.git
-Navigate into the project directory:
+**Description**: Retrieve a list of the main cast members from the show *Power*.
 
-bash
-Copy code
-cd power-show-api
-Create and activate a virtual environment (if not already done):
+### 2. Get Seasons and Episodes
 
-bash
-Copy code
-python -m venv .venv
-.venv\Scripts\activate  # On Windows
-Install dependencies:
+**Endpoint**: `/seasons/{season_number}`
 
-bash
-Copy code
-pip install -r requirements.txt
-Run the FastAPI application:
+**Method**: `GET`
 
-bash
-Copy code
-uvicorn main:app --reload
-Open your browser and navigate to http://127.0.0.1:8000/docs to access the interactive API documentation.﻿# power-show-api
+**Description**: Retrieve a list of episodes for a specific season.
+
+### 3. Get Episode Title
+
+**Endpoint**: `/seasons/{season_number}/episodes/{episode_number}`
+
+**Method**: `GET`
+
+**Description**: Retrieve the title of a specific episode from a specific season.
+
